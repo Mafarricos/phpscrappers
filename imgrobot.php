@@ -1,9 +1,9 @@
 <?php
 $downloadpath='c:\\temp\\';
 $album=[ALBUMHERE];
-checklink('http://www.imgrobot.com/album/'.$album.'/?sort=date_desc&page=100',0,'');
+checklink('http://www.imgrobot.com/album/'.$album.'/?sort=date_desc&page=100',0,'',$downloadpath);
 
-function checklink($link,$i,$namealbum){
+function checklink($link,$i,$namealbum,$downloadpath){
 	$site=$link;
 	$curl = curl_init($link);
 	curl_setopt($curl, CURLOPT_AUTOREFERER, true);
